@@ -1,0 +1,210 @@
+=\documentclass[12pts,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[version=3]{mhchem}
+\usepackage[journal=jacs]{chemstyle}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage[stable]{footmisc}
+\usepackage[section]{placeins}
+%Paquetes necesarios para imágenes, pies de página, etc.
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{fancyhdr}
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%Instrucción para evitar la indentación
+%\setlength\parindent{0pt}
+%Paquete para incluir la bibliografía
+\usepackage[backend=bibtex,style=chem-acs,biblabel=dot]{biblatex}
+\addbibresource{references.bib}
+
+%Formato del título de las secciones
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+%Creación del ambiente anexos
+\usepackage{float}
+\floatstyle{plaintop}
+\newfloat{anexo}{thp}{anx}
+\floatname{anexo}{Anexo}
+\restylefloat{anexo}
+\restylefloat{figure}
+
+%Modificación del formato de los captions
+\usepackage[margin=10pt,labelfont=bf]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%Inicio del documento%
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vspace*{-1in}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{uni.png}
+\end{center}
+\end{figure}
+
+\vspace*{0.15in}
+DEPARTAMENTO DE GEOCIENCIAS \\
+\vspace*{0.6in}
+\begin{large}
+Laura Alejandra Jáuregui Molina\\
+\end{large}
+\vspace*{0.2in}
+\begin{large}
+Tarea 5 \\
+\end{large}
+\vspace*{0.2in}
+\begin{Large}
+\textbf{MONTE CARLO} \\
+\end{Large}
+\begin{Large}
+\textbf{Métodos Computacionales}\\
+
+\end{Large}
+
+\vspace*{0.3in}
+\rule{80mm}{0.1mm}\\
+\vspace*{0.1in}
+\begin{large}
+Profesor: \\
+Verónica Arias\\
+\end{large}
+\end{center}
+
+\end{titlepage}
+\renewcommand{\labelitemi}{$\checkmark$}
+
+\begin{center}
+
+\textbf{\LARGE{Tarea 5 - Métodos Computacionales}}\\
+\fill{
+\vspace{3mm}
+
+\textbf{\large{Alejandra Jáuregui Molina - 201412468}}\\}
+\hrulefill
+	\vspace{4mm}
+	
+\textbf{\large{MONTE CARLO}}\\
+
+\textbf{\large{Universidad de los Andes}}\\
+	\today
+\end{center}
+\vspace{1mm}
+
+
+
+\section{Canales Iónicos}
+
+Mediante el método de MCMC se obtuvo el circulo más grande posible en las moléculas obtenidas con los archivos de texto previamente proporcionados, Este entonces, efectuó el modelo en 2D de dichos canales iónicos. Adicionalmente se graficaron tanto los histogramas de los valores de las coordenadas x , y del centro del c´ırculo y el círculo máximo obtenido. 
+
+
+
+\begin{figure}[H]
+\begin{center}
+\label{1}
+\includegraphics[height=6.5cm]{1.png}
+\caption {Gráfica Canales_ionicos}
+\end{center}
+\end{figure}
+
+Gráfica de moléculas junto al poro propuesto (círculo más grande) entre ellas para el primer archivo de datos.
+
+La gráfica anterior, además incluye los valores de losresultados finales obtenidos en el archivo $canales_ionicos.c$
+
+
+\begin{figure}[H]
+\begin{center}
+\label{2}
+\includegraphics[height=6.5cm]{2.png}
+\caption {Gráfica Canales_ionicos1}
+\end{center}
+\end{figure}
+
+Gráfica2 de moléculas junto al poro propuesto (círculo más grande) entre ellas para el segundo archivo de datos.
+
+La gráfica anterior, además incluye los valores de losresultados finales obtenidos en el archivo $canales_ionicos.c$
+
+\begin{figure}[H]
+\begin{center}
+\label{3}
+\includegraphics[height=8.5cm]{3.png}
+\caption {Histograma Primer Archivo}
+\end{center}
+\end{figure}
+
+Histograma de las coordenadas x,y para el centro del círculo, del archivo 1.  
+
+Se puede evidenciar que la tendencia del histograma va hacía la posición final del círculo 
+
+
+\begin{figure}[H]
+\begin{center}
+\label{4}
+\includegraphics[height=8.5cm]{4.png}
+\caption {Histograma Segundo Archivo}
+\end{center}
+\end{figure}
+
+Histograma de las coordenadas x,y para el centro del círculo, del archivo 1.  
+
+Se puede evidenciar que la tendencia del histograma va hacía la posición final del círculo 
+
+\section{Carga de un circuito RC}
+
+Para este ejercicio se graficaron los resultados al uso del método de MCMC Bayes. El walk correspondiente se llevó a cabo con $Q_{max}$ y $\mu$ de tal forma que fuese posible despejar de ahí los valores respectivos de R Y C, teniendo en cuenta que $Q_{max} = 10C$ y $\miu = \frac{1}{RC}$.
+
+\begin{figure}[H]
+\begin{center}
+\label{5}
+\includegraphics[height=7.5cm]{5.png}
+\caption {Gráfica de los datos del circuito con el ajuste}
+\end{center}
+\end{figure}
+
+La gráfica anterior muestra la relación entre los datos del circuito con el ajuste realizado usando determinación bayesiana de parámetros. 
+
+Adicionalmente, en ella se encuentran los resultados obtenidos
+
+\begin{figure}[H]
+\begin{center}
+\label{6}
+\includegraphics[height=8.5cm]{6.png}
+\caption {Gráfica de los valores de R y de C en función de la función de verosimilitud}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\label{7}
+\includegraphics[height=8.5cm]{7.png}
+\caption {Histograma Q y Miu}
+\end{center}
+\end{figure}
+
+Histograma del walk de Q obtenido indirectamente a partir del walk de Miu
+
+\begin{figure}[H]
+\begin{center}
+\label{8}
+\includegraphics[height=8.5cm]{8.png}
+\caption {Histograma de R y C}
+\end{center}
+\end{figure}
+
+Histograma del walk de R y C obtenidos previamente de la relación de los valores de Q y Miu
+
+
+\end{document}
